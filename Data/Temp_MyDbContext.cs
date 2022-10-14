@@ -9,6 +9,8 @@ namespace Trabalho_Final.Data
         const string ConnectionStr = "server=localhost;port=3306;database=EmpresaComs;user=root;password=Malloc33";
 
         public DbSet<Cliente> Clientes { get; set; }
+        public DbSet<Cartao> Cartoes { get; set; }
+        public DbSet<Mensagem> Mensagens { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
