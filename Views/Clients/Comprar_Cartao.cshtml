@@ -1,0 +1,43 @@
+﻿@model Trabalho_Final.Models.Cartao
+
+@{
+    ViewData["Title"] = "Comprar_Cartao";
+}
+
+<h1>Comprar_Cartao</h1>
+
+<h4>Cartao</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Comprar_Cartao">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nr_Cliente" class="control-label"></label>
+                <input asp-for="Nr_Cliente" class="form-control" />
+                <span asp-validation-for="Nr_Cliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Saldo" class="control-label"></label>
+                <input asp-for="Saldo" class="form-control" />
+                <span asp-validation-for="Saldo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Validade" class="control-label"></label>
+                <input asp-for="Validade" class="form-control" />
+                <span asp-validation-for="Validade" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

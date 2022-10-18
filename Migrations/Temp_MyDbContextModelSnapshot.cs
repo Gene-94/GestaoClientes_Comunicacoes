@@ -19,6 +19,26 @@ namespace Trabalho_Final.Migrations
                 .HasAnnotation("ProductVersion", "6.0.9")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
+            modelBuilder.Entity("Trabalho_Final.Models.Cartao", b =>
+                {
+                    b.Property<int>("Nr_Cartao")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<int>("Nr_Cliente")
+                        .HasColumnType("int");
+
+                    b.Property<float>("Saldo")
+                        .HasColumnType("float");
+
+                    b.Property<DateTime>("Validade")
+                        .HasColumnType("datetime(6)");
+
+                    b.HasKey("Nr_Cartao");
+
+                    b.ToTable("Cartoes");
+                });
+
             modelBuilder.Entity("Trabalho_Final.Models.Cliente", b =>
                 {
                     b.Property<int>("NrCliente")
@@ -62,6 +82,30 @@ namespace Trabalho_Final.Migrations
                     b.HasKey("NrCliente");
 
                     b.ToTable("Clientes");
+                });
+
+            modelBuilder.Entity("Trabalho_Final.Models.Mensagem", b =>
+                {
+                    b.Property<int>("Id_Mensagem")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Conteudo")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<DateTime>("Data_Envio")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<int>("Destino")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Origem")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id_Mensagem");
+
+                    b.ToTable("Mensagens");
                 });
 #pragma warning restore 612, 618
         }
