@@ -9,7 +9,7 @@ using Trabalho_Final.Data;
 
 namespace Trabalho_Final.Migrations
 {
-    [DbContext(typeof(Temp_MyDbContext))]
+    [DbContext(typeof(ProjectDbContext))]
     partial class Temp_MyDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

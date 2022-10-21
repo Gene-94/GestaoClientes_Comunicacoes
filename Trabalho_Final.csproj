@@ -22,7 +22,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="BusinessLogic\" />
     <Folder Include="System_Messages\" />
   </ItemGroup>
 

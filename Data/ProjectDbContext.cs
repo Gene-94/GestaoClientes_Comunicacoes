@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Trabalho_Final.Data
 {
-    public class Temp_MyDbContext : DbContext 
+    public class ProjectDbContext : DbContext 
     {
         const string ConnectionStr = "server=localhost;port=3306;database=EmpresaComs;user=root;password=Malloc33";
 

@@ -10,7 +10,7 @@ using Trabalho_Final.Data;
 
 namespace Trabalho_Final.Migrations
 {
-    [DbContext(typeof(Temp_MyDbContext))]
+    [DbContext(typeof(ProjectDbContext))]
     [Migration("20221014185602_DbVersion2")]
     partial class DbVersion2
     {
